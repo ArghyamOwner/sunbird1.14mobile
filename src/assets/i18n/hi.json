@@ -447,5 +447,7 @@
   "WELCOME_BACK": "आपका {{%s}} फिर से स्वागत है",
   "WHAT_WENT_WRONG": "क्या गलत हुआ?",
   "YES": "हाँ",
-  "YOUR_PROGRESS": "आपकी प्रगति : {{%s}}%"
+  "YOUR_PROGRESS": "आपकी प्रगति : {{%s}}%",
+  "QUESTIONS_BNAV": "सवाल",
+  "QUESTIONS_LW": "सवाल"
 }

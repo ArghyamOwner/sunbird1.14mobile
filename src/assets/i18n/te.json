@@ -414,5 +414,7 @@
   "WELCOME_BACK": "మీకు తిరిగి స్వాగతం {{%s}}",
   "WHAT_WENT_WRONG": "ఏం పొరపాటు జరిగింది?",
   "YES": "అవును",
-  "YOUR_PROGRESS": "మీ పురోగతి: {{%s}}%"
+  "YOUR_PROGRESS": "మీ పురోగతి: {{%s}}%",
+  "QUESTIONS_BNAV": "ప్రశ్నలు",
+  "QUESTIONS_LW": "ప్రశ్నలు"
 }

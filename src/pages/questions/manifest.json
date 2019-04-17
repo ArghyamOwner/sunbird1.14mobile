@@ -1,0 +1,8 @@
+{
+    "id": "sunnird.plugin.questions",
+    "version": "0.0.1",
+    "module": "QuestionsPageModule",
+    "main": "QuestionsPage",
+    "children": [],
+    "appVersion": "0.0.1"
+}

@@ -139,6 +139,10 @@ h6 {
     .tab-button-icon[aria-label=profile] {
       background-image: url(../assets/imgs/ic_profile.png);
     }
+    .tab-button-icon[ng-reflect-name=questions],
+    .tab-button-icon[aria-label=questions] {
+      background-image: url(../assets/imgs/ic_questions.png);
+    }
   }
   a[aria-selected=true] {
     //führ eventuellen text
@@ -164,6 +168,10 @@ h6 {
     .tab-button-icon[ng-reflect-name=profile],
     .tab-button-icon[aria-label=profile] {
       background-image: url(../assets/imgs/ic_profile_blue.png);
+    }
+    .tab-button-icon[ng-reflect-name=questions],
+    .tab-button-icon[aria-label=questions] {
+      background-image: url(../assets/imgs/ic_questions_blue.png);
     }
   }
 }
@@ -190,6 +198,10 @@ h6 {
     .tab-button-icon[aria-label=profile] {
       background-image: url(../assets/imgs/ic_profile.png);
     }
+    .tab-button-icon[ng-reflect-name=questions],
+    .tab-button-icon[aria-label=questions] {
+      background-image: url(../assets/imgs/ic_questions.png);
+    }
   }
   a[aria-selected=true] {
     //führ eventuellen text
@@ -215,6 +227,10 @@ h6 {
     .tab-button-icon[ng-reflect-name=profile],
     .tab-button-icon[aria-label=profile] {
       background-image: url(../assets/imgs/ic_profile_blue.png);
+    }
+    .tab-button-icon[ng-reflect-name=questions],
+    .tab-button-icon[aria-label=questions] {
+      background-image: url(../assets/imgs/ic_questions_blue.png);
     }
   }
 }
@@ -241,6 +257,10 @@ h6 {
     .tab-button-icon[aria-label=profile] {
       background-image: url(../assets/imgs/ic_profile.png);
     }
+    .tab-button-icon[ng-reflect-name=questions],
+    .tab-button-icon[aria-label=questions] {
+      background-image: url(../assets/imgs/ic_questions.png);
+    }
   }
   a[aria-selected=true] {
     //führ eventuellen text
@@ -266,6 +286,10 @@ h6 {
     .tab-button-icon[ng-reflect-name=profile],
     .tab-button-icon[aria-label=profile] {
       background-image: url(../assets/imgs/ic_profile_blue.png);
+    }
+    .tab-button-icon[ng-reflect-name=questions],
+    .tab-button-icon[aria-label=questions] {
+      background-image: url(../assets/imgs/ic_questions_blue.png);
     }
   }
 }

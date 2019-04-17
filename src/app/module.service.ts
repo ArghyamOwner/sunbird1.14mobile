@@ -24,6 +24,8 @@ import {ReportsPageModule} from '../pages/reports/reports.module';
 import {UserReportModule} from '../pages/reports/user-report/user-report.module';
 import {QrCodeResultPageModule} from '../pages/qr-code-result/qr-code-result.module';
 import {TermsAndConditionsPageModule} from '@app/pages/terms-and-conditions/terms-and-conditions.module';
+import { QuestionsPage } from '../pages/questions/questions';
+import { QuestionsPageModule } from '../pages/questions/questions.module';
 
 // const HOME_TAB = { root: HomePage, icon: "home", label: "HOME_BNAV", index: 0, tabsHideOnSubPages: true };
 const COURSE_TAB = {
@@ -41,18 +43,25 @@ const LIBRARY_TAB = {
     tabsHideOnSubPages: true,
     isSelected: true
 };
+const QUESTIONS_TAB = { 
+    root: QuestionsPage,
+    icon: 'questions',
+    label: 'QUESTIONS_BNAV',
+    index: 3,
+    tabsHideOnSubPages: true
+};
 const GUEST_PROFILE_TAB = {
     root: GuestProfilePage,
     icon: 'profile',
     label: 'PROFILE_BNAV',
-    index: 3,
+    index: 4,
     tabsHideOnSubPages: true
 };
 const GUEST_PROFILE_SWITCH_TAB = {
     root: GuestProfilePage,
     icon: 'profile',
     label: 'PROFILE_BNAV',
-    index: 3,
+    index: 4,
     tabsHideOnSubPages: true,
     isSelected: true
 };
@@ -60,7 +69,7 @@ const PROFILE_TAB = {
     root: ProfilePage,
     icon: 'profile',
     label: 'PROFILE_BNAV',
-    index: 3,
+    index: 4,
     tabsHideOnSubPages: true
 };
 
@@ -68,6 +77,7 @@ export const GUEST_TEACHER_TABS = [
     // HOME_TAB,
     COURSE_TAB,
     LIBRARY_TAB,
+    QUESTIONS_TAB,
     GUEST_PROFILE_TAB
 ];
 
@@ -75,11 +85,13 @@ export const LOGIN_TEACHER_TABS = [
     // HOME_TAB,
     COURSE_TAB,
     LIBRARY_TAB,
+    QUESTIONS_TAB,
     PROFILE_TAB
 ];
 
 export const GUEST_STUDENT_TABS = [
     LIBRARY_TAB,
+    QUESTIONS_TAB,
     GUEST_PROFILE_TAB
 ];
 
@@ -87,11 +99,13 @@ export const GUEST_TEACHER_SWITCH_TABS = [
     // HOME_TAB,
     COURSE_TAB,
     LIBRARY_TAB,
+    QUESTIONS_TAB,
     GUEST_PROFILE_SWITCH_TAB
 ];
 
 export const GUEST_STUDENT_SWITCH_TABS = [
     LIBRARY_TAB,
+    QUESTIONS_TAB,
     GUEST_PROFILE_SWITCH_TAB
 ];
 
@@ -126,6 +140,7 @@ export const PluginModules = [
     ReportsPageModule,
     UserReportModule,
     ProfileSettingsPageModule,
-  QrCodeResultPageModule,
-  TermsAndConditionsPageModule
+    QrCodeResultPageModule,
+    TermsAndConditionsPageModule,
+    QuestionsPageModule
 ];

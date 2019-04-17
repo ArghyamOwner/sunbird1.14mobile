@@ -447,5 +447,7 @@
   "WELCOME_BACK": "மீண்டும் வரவேற்கிறோம் {{%s}}",
   "WHAT_WENT_WRONG": "என்ன தவறு நடந்தது?",
   "YES": "ஆம்",
-  "YOUR_PROGRESS": "உங்கள் முன்னேற்றம்: {{%s}}%"
+  "YOUR_PROGRESS": "உங்கள் முன்னேற்றம்: {{%s}}%",
+  "QUESTIONS_BNAV": "கேள்விகள்",
+  "QUESTIONS_LW": "கேள்விகள்"
 }

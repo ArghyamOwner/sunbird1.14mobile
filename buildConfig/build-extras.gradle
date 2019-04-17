@@ -114,6 +114,7 @@ android {
          dev {
             applicationId "${dev_app_id}"
             resValue("string", "deeplink_base_url", "${dev_deeplink_base_url}")
+            buildConfigField 'String', 'QUESTIONS_BASE_URL', "\"${dev_questions_base_url}\""
             buildConfigField 'String', 'BASE_URL', "\"${dev_base_url}\""
             buildConfigField 'String', 'TELEMETRY_BASE_URL', "\"${dev_base_url+"/api/data/v1"}\""
             buildConfigField 'String', 'LANGUAGE_PLATFORM_BASE_URL', "\"${dev_base_url+"/api/language/v1"}\""
@@ -154,6 +155,7 @@ android {
         //     applicationId "${staging_app_id}"
         //     flavorDimensions "default"
         //     resValue("string", "deeplink_base_url", "${staging_deeplink_base_url}")
+        //     buildConfigField 'String', 'QUESTIONS_BASE_URL', "\"${staging_questions_base_url}\""
         //     buildConfigField 'String', 'BASE_URL', "\"${staging_base_url}\""
         //     buildConfigField 'String', 'TELEMETRY_BASE_URL', "\"${staging_base_url+"/api/data/v1"}\""
         //     buildConfigField 'String', 'LANGUAGE_PLATFORM_BASE_URL', "\"${staging_base_url+"/api/language/v1"}\""
@@ -193,6 +195,7 @@ android {
         //     applicationId "${production_app_id}"
         //     flavorDimensions "default"
         //     resValue("string", "deeplink_base_url", "${production_deeplink_base_url}")
+        //     buildConfigField 'String', 'QUESTIONS_BASE_URL', "\"${production_questions_base_url}\""
         //     buildConfigField 'String', 'BASE_URL', "\"${production_base_url}\""
         //     buildConfigField 'String', 'TELEMETRY_BASE_URL', "\"${production_base_url+"/api/data/v1"}\""
         //     buildConfigField 'String', 'LANGUAGE_PLATFORM_BASE_URL', "\"${production_base_url+"/api/language/v1"}\""
