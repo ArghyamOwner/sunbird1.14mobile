@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar></ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-slides pager="true" dir="{{this.commonUtilService.getAppDirection()}}" centeredSlides="true" speed="50" class="ion-slides">
+    <ion-slide *ngFor="let slide of slides">
+      <div class="title">{{ slide.title | translate:{'%s': appName} }}</div>
+      <img class="item-img" [src]="slide.imageUri" />
+      <div text-center class="description">
+        {{ slide.desc | translate:{'%s': appName} }}
+      </div>
+    </ion-slide>
+  </ion-slides>
+</ion-content>
+
+<ion-footer padding no-border>
+  <ion-row>
+    <button block ion-button (click)="signIn()">
+      {{ 'SIGN_IN' | translate }}
+    </button>
+  </ion-row>
+  <ion-row style="padding-top:8px;">
+    <button block ion-button outline (click)="browseAsGuest()">
+      {{ 'BROWSE_AS_GUEST' | translate }}
+    </button>
+  </ion-row>
+</ion-footer>
