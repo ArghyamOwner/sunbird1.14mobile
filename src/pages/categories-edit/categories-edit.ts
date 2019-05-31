@@ -54,6 +54,8 @@ export class CategoriesEditPage {
   gradeList = [];
   mediumList = [];
 
+  boardData = []; // We are getting this values from prfile.ts
+
   profile: Profile;
   profileEditForm: FormGroup;
   frameworkId: string;
@@ -64,6 +66,10 @@ export class CategoriesEditPage {
   loader: any;
 
   /* Custom styles for the select box popup */
+  frameworkOptions = {
+    title: this.commonUtilService.translateMessage('FRAMEWORK').toLocaleUpperCase(),
+    cssClass: 'select-box'
+  };
   boardOptions = {
     title: this.commonUtilService.translateMessage('BOARD').toLocaleUpperCase(),
     cssClass: 'select-box'
@@ -97,6 +103,8 @@ export class CategoriesEditPage {
     private framework: FrameworkService
   ) {
     this.profile = this.appGlobalService.getCurrentUser();
+    this.boardData = this.navParams.get('boardData')
+
     if (this.navParams.get('showOnlyMandatoryFields')) {
       this.showOnlyMandatoryFields = this.navParams.get('showOnlyMandatoryFields');
       if (this.navParams.get('profile')) {
@@ -151,13 +159,21 @@ export class CategoriesEditPage {
             // renaming the fields to text, value and checked
             const value = { 'name': element.name, 'code': element.identifier };
             this.syllabusList.push(value);
+            this.frameworkId = element.identifier;
           });
-
+          
           if (this.profile && this.profile.syllabus && this.profile.syllabus[0] !== undefined) {
             this.formAndFrameworkUtilService.getFrameworkDetails(this.profile.syllabus[0])
               .then(catagories => {
                 this.categories = catagories;
-                this.resetForm(0);
+                // this.resetForm(0);
+                const request: CategoryRequest = {
+                  currentCategory: this.categories[0].code,
+                  selectedLanguage: this.translate.currentLang,
+                  categories: FrameworkCategory.DEFAULT_FRAMEWORK_CATEGORIES
+                };
+      
+                this.getCategoryData(request,'boardList');
               }).catch(() => {
                 this.loader.dismiss();
                 this.commonUtilService.showToast(this.commonUtilService.translateMessage('NEED_INTERNET_TO_CHANGE'));
@@ -257,23 +273,48 @@ export class CategoriesEditPage {
     this.formAndFrameworkUtilService.getCategoryData(request, this.frameworkId)
       .then((result) => {
         this[currentField] = result;
-        if (request.currentCategory === 'board') {
-          const boardName = this.syllabusList.find(framework => this.frameworkId === framework.code);
-          if (boardName) {
-            const boardCode = result.find(board => boardName.name === board.name);
-            if (boardCode) {
-              this.profileEditForm.patchValue({
-                boards: [boardCode.code]
-              });
-              this.resetForm(1);
-            } else {
-              this.profileEditForm.patchValue({
-                boards: [result[0].code]
-              });
-              this.resetForm(1);
-            }
+
+        if (currentField == 'boardList') {
+          let boardcodes = [];
+
+          if (this.boardData && this.boardData.length != 0) {
+            this[currentField].forEach((item)=>{
+              this.boardData.forEach((boardName)=>{
+                if (item.name === boardName) {
+                  boardcodes.push(item.code); 
+                }
+              })
+            })
           }
-        } else if (this.editData) {
+
+          this.profileEditForm.patchValue({
+            boards: boardcodes,
+            // boards: this.boardData,
+            grades: [],
+            medium: []
+          });
+          
+          this.resetForm(1);
+        }
+
+        // if (request.currentCategory === 'board') {
+        //   const boardName = this.syllabusList.find(framework => this.frameworkId === framework.code);
+        //   if (boardName) {
+        //     const boardCode = result.find(board => boardName.name === board.name);
+        //     if (boardCode) {
+        //       this.profileEditForm.patchValue({
+        //         boards: [boardCode.code]
+        //       });
+        //       this.resetForm(1);
+        //     } else {
+        //       this.profileEditForm.patchValue({
+        //         boards: [result[0].code]
+        //       });
+        //       this.resetForm(1);
+        //     }
+        //   }
+        // } else 
+        if (this.editData) {
           this.editData = false;
           this.profileEditForm.patchValue({
             medium: this.profile.medium || []
@@ -350,12 +391,22 @@ export class CategoriesEditPage {
     this.loader.present();
     const req: UpdateUserInfoRequest = new UpdateUserInfoRequest();
     const framework = {};
-    if (formVal.syllabus) {
-      framework['id'] = [formVal.syllabus];
-    }
+    // if (formVal.syllabus) {
+    //   framework['id'] = [formVal.syllabus];
+    // }
+    framework['id'] = [this.frameworkId];
+
+    // if (formVal.boards) {
+    //   const code = typeof (formVal.boards) === 'string' ? formVal.boards : formVal.boards[0];
+    //   framework['board'] = [this.boardList.find(board => code === board.code).name];
+    // }
+
     if (formVal.boards) {
-      const code = typeof (formVal.boards) === 'string' ? formVal.boards : formVal.boards[0];
-      framework['board'] = [this.boardList.find(board => code === board.code).name];
+      const Names = [];
+      formVal.boards.forEach(element => {
+        Names.push(this.boardList.find(board => element === board.code).name);
+      });
+      framework['board'] = Names;
     }
     if (formVal.medium && formVal.medium.length) {
       const Names = [];

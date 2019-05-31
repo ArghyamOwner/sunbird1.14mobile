@@ -8,11 +8,19 @@
 	</div>
 	<form novalidate [formGroup]="userForm" class="form-position">
 
-		<ion-item>
-			<ion-label floating class="label-font">{{'BOARD_OPTION_TEXT' | translate }}</ion-label>
-			<ion-select multiple="false" #boardSelect text-capitalize formControlName="syllabus" [selectOptions]="boardOptions" (ionChange)="resetForm(0, true)"
+		<!-- <ion-item>
+			<ion-label floating class="label-font">{{'FRAMEWORK_OPTION_TEXT' | translate }}</ion-label>
+			<ion-select multiple="false" #boardSelect text-capitalize formControlName="syllabus" [selectOptions]="frameworkOptions" (ionChange)="resetForm(0, true)"
 			 okText="{{'BTN_SUBMIT' | translate}}" cancelText="{{'CANCEL' | translate}}">
 				<ion-option *ngFor="let eachSyllabus of syllabusList" value="{{eachSyllabus?.code}}">{{eachSyllabus?.name}}&lrm;</ion-option>
+			</ion-select>
+		</ion-item> -->
+
+		<ion-item>
+			<ion-label floating class="label-font">{{'BOARD_OPTION_TEXT' | translate }}</ion-label>
+			<ion-select multiple="true" #boardSelect text-capitalize formControlName="boards" [selectOptions]="boardOptions" (ionChange)="resetForm(1, false)"
+			 okText="{{'BTN_SUBMIT' | translate}}" cancelText="{{'CANCEL' | translate}}">
+				<ion-option *ngFor="let eachBoard of boardList" value="{{eachBoard?.code}}">{{eachBoard?.name}}&lrm;</ion-option>
 			</ion-select>
 		</ion-item>
 

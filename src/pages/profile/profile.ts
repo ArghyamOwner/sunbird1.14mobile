@@ -521,7 +521,9 @@ export class ProfilePage {
           PageId.PROFILE, null,
           undefined,
           undefined));
-      this.navCtrl.push(CategoriesEditPage);
+      this.navCtrl.push(CategoriesEditPage, {
+        boardData: this.profile.framework.board
+      });
     } else {
       this.commonUtilService.showToast('NEED_INTERNET_TO_CHANGE');
     }

@@ -51,7 +51,8 @@ export class MimeType {
 
 export class Search {
     public static readonly FACETS_ETB = [
-        'subject'
+        'board'
+        // 'subject'
     ];
 
     public static readonly FACETS = [

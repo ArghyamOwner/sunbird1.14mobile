@@ -106,10 +106,6 @@
     <plugin name="cordova-android-support-gradle-release" spec="2.1.0">
         <variable name="ANDROID_SUPPORT_VERSION" value="27.1.0" />
     </plugin>
-    <plugin name="sb-cordova-plugin-customtabs" spec="https://github.com/Sunbird-Ed/sb-cordova-plugin-customtabs.git">
-        <variable name="URL_SCHEME" value="org.sunbird.app.dev" />
-        <variable name="URL_HOST" value="mobile" />
-    </plugin>
     <plugin name="cordova-plugin-genie-sdk" spec="https://github.com/project-sunbird/cordova-plugin-genie-sdk.git#release-1.14.0" />
     <plugin name="cordova-plugin-imagechooser" spec="https://github.com/project-sunbird/cordova-plugin-imagechooser.git#release-1.14.0" />
     <plugin name="cordova-plugin-file-support" spec="https://github.com/project-sunbird/cordova-plugin-file-support.git#release-1.14.0" />
@@ -117,5 +113,9 @@
     <plugin name="cordova-plugin-sunbirdsplash" spec="https://github.com/project-sunbird/cordova-plugin-sunbirdsplash.git#release-1.14.0" />
     <plugin name="cordova-plugin-geniecanvas" spec="https://github.com/project-sunbird/cordova-plugin-geniecanvas.git#release-1.14.0" />
     <plugin name="cordova-plugin-openrap" spec="https://github.com/project-sunbird/cordova-plugin-openrap.git#release-1.14.0" />
+    <plugin name="sb-cordova-plugin-customtabs" spec="https://github.com/Sunbird-Ed/sb-cordova-plugin-customtabs.git">
+        <variable name="URL_SCHEME" value="org.forwater.app.staging" />
+        <variable name="URL_HOST" value="mobile" />
+    </plugin>
     <engine name="android" spec="7.0.0" />
 </widget>

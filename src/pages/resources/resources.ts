@@ -25,6 +25,7 @@ import {
   Events
 } from 'ionic-angular';
 import * as _ from 'lodash';
+import { ContentDetailsPage } from './../../pages/content-details/content-details';
 import { ViewMoreActivityPage } from '../view-more-activity/view-more-activity';
 import { SunbirdQRScanner } from '../qrscanner/sunbirdqrscanner.service';
 import { SearchPage } from '../search/search';
@@ -454,7 +455,7 @@ export class ResourcesPage implements OnInit, AfterViewInit {
     }
     this.getGroupByPageReq.mode = 'hard';
     this.getGroupByPageReq.facets = Search.FACETS_ETB;
-    this.getGroupByPageReq.contentTypes = [ContentType.TEXTBOOK];
+    this.getGroupByPageReq.contentTypes = [ContentType.TEXTBOOK, ContentType.COLLECTION, ContentType.RESOURCE];
     this.getGroupByPage(isAfterLanguageChange);
   }
 
@@ -472,7 +473,7 @@ export class ResourcesPage implements OnInit, AfterViewInit {
         Environment.HOME,
         this.source, undefined,
         reqvalues);
-    this.contentService.getGroupByPage(this.getGroupByPageReq, this.guestUser)
+    this.contentService.getGroupByPage(Search.FACETS_ETB[0], this.getGroupByPageReq, this.guestUser)
       .then((response: any) => {
         this.ngZone.run(() => {
           // TODO Temporary code - should be fixed at backend
@@ -839,25 +840,32 @@ export class ResourcesPage implements OnInit, AfterViewInit {
   }
 
   navigateToDetailPage(item, index, sectionName) {
-    const identifier = item.contentId || item.identifier;
-    const telemetryObject: TelemetryObject = new TelemetryObject();
-    telemetryObject.type = item.contentType;
+    console.log("Content type is " + item.contentType)
+    if (item.contentType === ContentType.RESOURCE) {
+      this.navCtrl.push(ContentDetailsPage, {
+        content: item
+      });
+    } else {
+      const identifier = item.contentId || item.identifier;
+      const telemetryObject: TelemetryObject = new TelemetryObject();
+      telemetryObject.type = item.contentType;
 
-    telemetryObject.id = identifier;
+      telemetryObject.id = identifier;
 
-    const values = new Map();
-    values['sectionName'] = sectionName;
-    values['positionClicked'] = index;
-    console.log('telemetryObject ', telemetryObject);
-    this.telemetryGeneratorService.generateInteractTelemetry(InteractType.TOUCH,
-      InteractSubtype.CONTENT_CLICKED,
-      'home',
-      'library',
-      telemetryObject,
-      values);
+      const values = new Map();
+      values['sectionName'] = sectionName;
+      values['positionClicked'] = index;
+      console.log('telemetryObject ', telemetryObject);
+      this.telemetryGeneratorService.generateInteractTelemetry(InteractType.TOUCH,
+        InteractSubtype.CONTENT_CLICKED,
+        'home',
+        'library',
+        telemetryObject,
+        values);
 
-    this.navCtrl.push(CollectionDetailsEtbPage, {
-      content: item
-    });
+      this.navCtrl.push(CollectionDetailsEtbPage, {
+        content: item
+      });
+    }
   }
 }

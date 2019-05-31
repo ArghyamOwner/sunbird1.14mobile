@@ -1,0 +1,744 @@
+{
+    "id": "api.framework.read",
+    "ver": "1.0",
+    "ts": "2019-04-24T10:55:10.827Z",
+    "params": {
+        "resmsgid": "6e42ebb0-667f-11e9-af9e-6d7c4817c29b",
+        "msgid": "6e402c90-667f-11e9-8bcc-f52b48cb544e",
+        "status": "successful",
+        "err": null,
+        "errmsg": null
+    },
+    "responseCode": "OK",
+    "result": {
+        "framework": {
+            "identifier": "jdf1",
+            "code": "jdf1",
+            "name": "Jaldhara",
+            "description": "Jaldhara",
+            "graph_id": "domain",
+            "nodeType": "DATA_NODE",
+            "type": "TPD",
+            "node_id": 405508,
+            "objectType": "Framework",
+            "categories": [
+                {
+                    "identifier": "jdf1_board",
+                    "code": "board",
+                    "terms": [
+                        {
+                            "identifier": "jdf1_board_basic",
+                            "code": "basic",
+                            "translations": null,
+                            "name": "Basic",
+                            "description": "string",
+                            "index": 1,
+                            "category": "board",
+                            "status": "Live"
+                        },
+                        {
+                            "identifier": "jdf1_board_intermediate",
+                            "code": "intermediate",
+                            "translations": null,
+                            "name": "Intermediate",
+                            "description": "string",
+                            "index": 2,
+                            "category": "board",
+                            "status": "Live"
+                        },
+                        {
+                            "identifier": "jdf1_board_advanced",
+                            "code": "advanced",
+                            "translations": null,
+                            "name": "Advanced",
+                            "description": "string",
+                            "index": 3,
+                            "category": "board",
+                            "status": "Live"
+                        }
+                    ],
+                    "translations": null,
+                    "name": "Board",
+                    "description": "board map with proficiency",
+                    "index": 1,
+                    "status": "Live"
+                },
+                {
+                    "identifier": "jdf1_medium",
+                    "code": "medium",
+                    "terms": [
+                        {
+                            "identifier": "jdf1_medium_english",
+                            "code": "english",
+                            "translations": null,
+                            "name": "English",
+                            "description": "string",
+                            "index": 1,
+                            "category": "medium",
+                            "status": "Live"
+                        },
+                        {
+                            "identifier": "jdf1_medium_hindi",
+                            "code": "hindi",
+                            "translations": null,
+                            "name": "Hindi",
+                            "description": "string",
+                            "index": 2,
+                            "category": "medium",
+                            "status": "Live"
+                        },
+                        {
+                            "identifier": "jdf1_medium_kannada",
+                            "code": "kannada",
+                            "translations": null,
+                            "name": "Kannada",
+                            "description": "string",
+                            "index": 3,
+                            "category": "medium",
+                            "status": "Live"
+                        },
+                        {
+                            "identifier": "jdf1_medium_assamese",
+                            "code": "assamese",
+                            "translations": null,
+                            "name": "Assamese",
+                            "description": "string",
+                            "index": 4,
+                            "category": "medium",
+                            "status": "Live"
+                        },
+                        {
+                            "identifier": "jdf1_medium_bengali",
+                            "code": "bengali",
+                            "translations": null,
+                            "name": "Bengali",
+                            "description": "string",
+                            "index": 5,
+                            "category": "medium",
+                            "status": "Live"
+                        },
+                        {
+                            "identifier": "jdf1_medium_bhojpuri",
+                            "code": "bhojpuri",
+                            "translations": null,
+                            "name": "Bhojpuri",
+                            "description": "string",
+                            "index": 6,
+                            "category": "medium",
+                            "status": "Live"
+                        },
+                        {
+                            "identifier": "jdf1_medium_bishnupriya-manipuri",
+                            "code": "bishnupriya manipuri",
+                            "translations": null,
+                            "name": "Bishnupriya Manipuri",
+                            "description": "string",
+                            "index": 7,
+                            "category": "medium",
+                            "status": "Live"
+                        },
+                        {
+                            "identifier": "jdf1_medium_gujarati",
+                            "code": "gujarati",
+                            "translations": null,
+                            "name": "Gujarati",
+                            "description": "string",
+                            "index": 8,
+                            "category": "medium",
+                            "status": "Live"
+                        },
+                        {
+                            "identifier": "jdf1_medium_kashmiri",
+                            "code": "kashmiri",
+                            "translations": null,
+                            "name": "Kashmiri",
+                            "description": "string",
+                            "index": 9,
+                            "category": "medium",
+                            "status": "Live"
+                        },
+                        {
+                            "identifier": "jdf1_medium_konkani",
+                            "code": "konkani",
+                            "translations": null,
+                            "name": "Konkani",
+                            "description": "string",
+                            "index": 10,
+                            "category": "medium",
+                            "status": "Live"
+                        },
+                        {
+                            "identifier": "jdf1_medium_maithili",
+                            "code": "maithili",
+                            "translations": null,
+                            "name": "Maithili",
+                            "description": "string",
+                            "index": 11,
+                            "category": "medium",
+                            "status": "Live"
+                        },
+                        {
+                            "identifier": "jdf1_medium_malayalam",
+                            "code": "malayalam",
+                            "translations": null,
+                            "name": "Malayalam",
+                            "description": "string",
+                            "index": 12,
+                            "category": "medium",
+                            "status": "Live"
+                        },
+                        {
+                            "identifier": "jdf1_medium_marathi",
+                            "code": "marathi",
+                            "translations": null,
+                            "name": "Marathi",
+                            "description": "string",
+                            "index": 13,
+                            "category": "medium",
+                            "status": "Live"
+                        },
+                        {
+                            "identifier": "jdf1_medium_nepali",
+                            "code": "nepali",
+                            "translations": null,
+                            "name": "Nepali",
+                            "description": "string",
+                            "index": 14,
+                            "category": "medium",
+                            "status": "Live"
+                        },
+                        {
+                            "identifier": "jdf1_medium_odia",
+                            "code": "odia",
+                            "translations": null,
+                            "name": "Odia",
+                            "description": "string",
+                            "index": 15,
+                            "category": "medium",
+                            "status": "Live"
+                        },
+                        {
+                            "identifier": "jdf1_medium_punjabi",
+                            "code": "punjabi",
+                            "translations": null,
+                            "name": "Punjabi",
+                            "description": "string",
+                            "index": 16,
+                            "category": "medium",
+                            "status": "Live"
+                        },
+                        {
+                            "identifier": "jdf1_medium_sindhi",
+                            "code": "sindhi",
+                            "translations": null,
+                            "name": "Sindhi",
+                            "description": "string",
+                            "index": 17,
+                            "category": "medium",
+                            "status": "Live"
+                        },
+                        {
+                            "identifier": "jdf1_medium_tamil",
+                            "code": "tamil",
+                            "translations": null,
+                            "name": "Tamil",
+                            "description": "string",
+                            "index": 18,
+                            "category": "medium",
+                            "status": "Live"
+                        },
+                        {
+                            "identifier": "jdf1_medium_telugu",
+                            "code": "telugu",
+                            "translations": null,
+                            "name": "Telugu",
+                            "description": "string",
+                            "index": 19,
+                            "category": "medium",
+                            "status": "Live"
+                        },
+                        {
+                            "identifier": "jdf1_medium_tulu",
+                            "code": "tulu",
+                            "translations": null,
+                            "name": "Tulu",
+                            "description": "string",
+                            "index": 20,
+                            "category": "medium",
+                            "status": "Live"
+                        }
+                    ],
+                    "translations": null,
+                    "name": "Medium",
+                    "description": "medium map with language",
+                    "index": 2,
+                    "status": "Live"
+                },
+                {
+                    "identifier": "jdf1_gradelevel",
+                    "code": "gradeLevel",
+                    "terms": [
+                        {
+                            "identifier": "jdf1_gradelevel_basic",
+                            "code": "basic",
+                            "translations": null,
+                            "name": "Ground Water",
+                            "description": "string",
+                            "index": 1,
+                            "category": "gradeLevel",
+                            "status": "Live"
+                        },
+                        {
+                            "identifier": "jdf1_gradelevel_intermediate",
+                            "code": "intermediate",
+                            "translations": null,
+                            "name": "Surface Water",
+                            "description": "string",
+                            "index": 2,
+                            "category": "gradeLevel",
+                            "status": "Live"
+                        },
+                        {
+                            "identifier": "jdf1_gradelevel_advanced",
+                            "code": "advanced",
+                            "translations": null,
+                            "name": "Glaciers",
+                            "description": "string",
+                            "index": 3,
+                            "category": "gradeLevel",
+                            "status": "Live"
+                        },
+                        {
+                            "identifier": "jdf1_gradelevel_river",
+                            "code": "river",
+                            "translations": null,
+                            "name": "River",
+                            "description": "string",
+                            "index": 4,
+                            "category": "gradeLevel",
+                            "status": "Live"
+                        },
+                        {
+                            "identifier": "jdf1_gradelevel_lake",
+                            "code": "lake",
+                            "translations": null,
+                            "name": "Lake",
+                            "description": "string",
+                            "index": 5,
+                            "category": "gradeLevel",
+                            "status": "Live"
+                        },
+                        {
+                            "identifier": "jdf1_gradelevel_wastewater",
+                            "code": "wastewater",
+                            "translations": null,
+                            "name": "Wastewater",
+                            "description": "string",
+                            "index": 6,
+                            "category": "gradeLevel",
+                            "status": "Live"
+                        },
+                        {
+                            "identifier": "jdf1_gradelevel_springs",
+                            "code": "springs",
+                            "translations": null,
+                            "name": "Springs",
+                            "description": "string",
+                            "index": 7,
+                            "category": "gradeLevel",
+                            "status": "Live"
+                        },
+                        {
+                            "identifier": "jdf1_gradelevel_testl2",
+                            "code": "testL2",
+                            "translations": null,
+                            "name": "TestL2",
+                            "description": "string",
+                            "index": 8,
+                            "category": "gradeLevel",
+                            "status": "Live"
+                        }
+                    ],
+                    "translations": null,
+                    "name": "GradeLevel",
+                    "description": "gradelevel map with resource",
+                    "index": 3,
+                    "status": "Live"
+                },
+                {
+                    "identifier": "jdf1_topic",
+                    "code": "topic",
+                    "terms": [
+                        {
+                            "identifier": "jdf1_topic_scientific-aspects-of-water",
+                            "code": "scientific aspects of water",
+                            "children": [
+                                {
+                                    "identifier": "jdf1_topic_earth_sciences",
+                                    "code": "earth_sciences",
+                                    "translations": null,
+                                    "name": "Earth Sciences",
+                                    "description": "string",
+                                    "index": 1,
+                                    "category": "topic",
+                                    "status": "Live"
+                                },
+                                {
+                                    "identifier": "jdf1_topic_geology",
+                                    "code": "geology",
+                                    "translations": null,
+                                    "name": "Geology",
+                                    "description": "string",
+                                    "index": 2,
+                                    "category": "topic",
+                                    "status": "Live"
+                                },
+                                {
+                                    "identifier": "jdf1_topic_hydrology",
+                                    "code": "hydrology",
+                                    "translations": null,
+                                    "name": "Hydrology",
+                                    "description": "string",
+                                    "index": 3,
+                                    "category": "topic",
+                                    "status": "Live"
+                                },
+                                {
+                                    "identifier": "jdf1_topic_hydrogeology",
+                                    "code": "hydrogeology",
+                                    "translations": null,
+                                    "name": "Hydrogeology",
+                                    "description": "string",
+                                    "index": 4,
+                                    "category": "topic",
+                                    "status": "Live"
+                                },
+                                {
+                                    "identifier": "jdf1_topic_aquifers",
+                                    "code": "aquifers",
+                                    "translations": null,
+                                    "name": "Aquifers",
+                                    "description": "string",
+                                    "index": 5,
+                                    "category": "topic",
+                                    "status": "Live"
+                                }
+                            ],
+                            "translations": null,
+                            "name": "Scientific Aspects of Water",
+                            "description": "string",
+                            "index": 1,
+                            "category": "topic",
+                            "status": "Live"
+                        },
+                        {
+                            "identifier": "jdf1_topic_measurement_and_mapping",
+                            "code": "measurement_and_mapping",
+                            "children": [
+                                {
+                                    "identifier": "jdf1_topic_maps",
+                                    "code": "maps",
+                                    "translations": null,
+                                    "name": "Maps ",
+                                    "description": "string",
+                                    "index": 1,
+                                    "category": "topic",
+                                    "status": "Live"
+                                },
+                                {
+                                    "identifier": "jdf1_topic_standards_and_parameters",
+                                    "code": "standards_and_parameters",
+                                    "translations": null,
+                                    "name": "Standards and Parameters ",
+                                    "description": "string",
+                                    "index": 2,
+                                    "category": "topic",
+                                    "status": "Live"
+                                },
+                                {
+                                    "identifier": "jdf1_topic_instruments_and_procedures",
+                                    "code": "instruments_and_procedures",
+                                    "translations": null,
+                                    "name": "Instruments and Procedures",
+                                    "description": "string",
+                                    "index": 3,
+                                    "category": "topic",
+                                    "status": "Live"
+                                },
+                                {
+                                    "identifier": "jdf1_topic_setting_up_monitoring_systems",
+                                    "code": "setting_up_monitoring_systems",
+                                    "translations": null,
+                                    "name": "Setting up Monitoring Systems",
+                                    "description": "string",
+                                    "index": 4,
+                                    "category": "topic",
+                                    "status": "Live"
+                                }
+                            ],
+                            "translations": null,
+                            "name": "Measurement and Mapping",
+                            "description": "string",
+                            "index": 2,
+                            "category": "topic",
+                            "status": "Live"
+                        },
+                        {
+                            "identifier": "jdf1_topic_water_quality_health",
+                            "code": "water_quality_health",
+                            "children": [
+                                {
+                                    "identifier": "jdf1_topic_contaminants",
+                                    "code": "contaminants",
+                                    "translations": null,
+                                    "name": "Contaminants",
+                                    "description": "string",
+                                    "index": 1,
+                                    "category": "topic",
+                                    "status": "Live"
+                                },
+                                {
+                                    "identifier": "jdf1_topic_testing_instruments_procedures",
+                                    "code": "testing_instruments_procedures",
+                                    "translations": null,
+                                    "name": "Testing: Instruments & Procedures",
+                                    "description": "string",
+                                    "index": 2,
+                                    "category": "topic",
+                                    "status": "Live"
+                                },
+                                {
+                                    "identifier": "jdf1_topic_health_impacts_remedial_measures",
+                                    "code": "health_impacts_remedial_measures",
+                                    "translations": null,
+                                    "name": "Health Impacts and Remedial Measures",
+                                    "description": "string",
+                                    "index": 3,
+                                    "category": "topic",
+                                    "status": "Live"
+                                },
+                                {
+                                    "identifier": "jdf1_topic_water_quality_and_nutrition",
+                                    "code": "water_quality_and_nutrition",
+                                    "translations": null,
+                                    "name": "Water Quality and Nutrition",
+                                    "description": "string",
+                                    "index": 4,
+                                    "category": "topic",
+                                    "status": "Live"
+                                }
+                            ],
+                            "translations": null,
+                            "name": "Water Quality & Health",
+                            "description": "string",
+                            "index": 3,
+                            "category": "topic",
+                            "status": "Live"
+                        },
+                        {
+                            "identifier": "jdf1_topic_social_aspects_of_water",
+                            "code": "social_aspects_of_water",
+                            "children": [
+                                {
+                                    "identifier": "jdf1_topic_participation",
+                                    "code": "participation",
+                                    "translations": null,
+                                    "name": "Participation",
+                                    "description": "string",
+                                    "index": 1,
+                                    "category": "topic",
+                                    "status": "Live"
+                                },
+                                {
+                                    "identifier": "jdf1_topic_equity",
+                                    "code": "equity ",
+                                    "translations": null,
+                                    "name": "Equity ",
+                                    "description": "string",
+                                    "index": 2,
+                                    "category": "topic",
+                                    "status": "Live"
+                                },
+                                {
+                                    "identifier": "jdf1_topic_behaviour_change",
+                                    "code": "behaviour_change ",
+                                    "translations": null,
+                                    "name": "Behaviour Change ",
+                                    "description": "string",
+                                    "index": 3,
+                                    "category": "topic",
+                                    "status": "Live"
+                                },
+                                {
+                                    "identifier": "jdf1_topic_conflict_resolution_and_management",
+                                    "code": "conflict_resolution_and_management",
+                                    "translations": null,
+                                    "name": "Conflict Resolution and Management",
+                                    "description": "string",
+                                    "index": 4,
+                                    "category": "topic",
+                                    "status": "Live"
+                                },
+                                {
+                                    "identifier": "jdf1_topic_access",
+                                    "code": "access",
+                                    "translations": null,
+                                    "name": "Access",
+                                    "description": "string",
+                                    "index": 5,
+                                    "category": "topic",
+                                    "status": "Live"
+                                }
+                            ],
+                            "translations": null,
+                            "name": "Social Aspects of Water",
+                            "description": "string",
+                            "index": 4,
+                            "category": "topic",
+                            "status": "Live"
+                        },
+                        {
+                            "identifier": "jdf1_topic_governance_and_institutions",
+                            "code": "governance_and_institutions",
+                            "children": [
+                                {
+                                    "identifier": "jdf1_topic_policies",
+                                    "code": "policies",
+                                    "translations": null,
+                                    "name": "Policies",
+                                    "description": "string",
+                                    "index": 1,
+                                    "category": "topic",
+                                    "status": "Live"
+                                },
+                                {
+                                    "identifier": "jdf1_topic_legal",
+                                    "code": "legal",
+                                    "translations": null,
+                                    "name": "Legal",
+                                    "description": "string",
+                                    "index": 2,
+                                    "category": "topic",
+                                    "status": "Live"
+                                },
+                                {
+                                    "identifier": "jdf1_topic_institutions",
+                                    "code": "institutions",
+                                    "translations": null,
+                                    "name": "Institutions",
+                                    "description": "string",
+                                    "index": 3,
+                                    "category": "topic",
+                                    "status": "Live"
+                                },
+                                {
+                                    "identifier": "jdf1_topic_programmes",
+                                    "code": "programmes",
+                                    "translations": null,
+                                    "name": "Programmes",
+                                    "description": "string",
+                                    "index": 4,
+                                    "category": "topic",
+                                    "status": "Live"
+                                },
+                                {
+                                    "identifier": "jdf1_topic_funds",
+                                    "code": "funds",
+                                    "translations": null,
+                                    "name": "Funds",
+                                    "description": "string",
+                                    "index": 5,
+                                    "category": "topic",
+                                    "status": "Live"
+                                }
+                            ],
+                            "translations": null,
+                            "name": "Governance and Institutions",
+                            "description": "string",
+                            "index": 5,
+                            "category": "topic",
+                            "status": "Live"
+                        },
+                        {
+                            "identifier": "jdf1_topic_resource_planning_and_management",
+                            "code": "resource_planning_and_management",
+                            "children": [
+                                {
+                                    "identifier": "jdf1_topic_demand_management",
+                                    "code": "demand_management",
+                                    "translations": null,
+                                    "name": "Demand Management",
+                                    "description": "string",
+                                    "index": 1,
+                                    "category": "topic",
+                                    "status": "Live"
+                                },
+                                {
+                                    "identifier": "jdf1_topic_supply_augmentation",
+                                    "code": "supply_augmentation",
+                                    "translations": null,
+                                    "name": "Supply Augmentation",
+                                    "description": "string",
+                                    "index": 2,
+                                    "category": "topic",
+                                    "status": "Live"
+                                },
+                                {
+                                    "identifier": "jdf1_topic_distribution_systems",
+                                    "code": "distribution_systems",
+                                    "translations": null,
+                                    "name": "Distribution Systems",
+                                    "description": "string",
+                                    "index": 3,
+                                    "category": "topic",
+                                    "status": "Live"
+                                },
+                                {
+                                    "identifier": "jdf1_topic_water_security_planning",
+                                    "code": "water_security_planning",
+                                    "translations": null,
+                                    "name": "Water Security Planning",
+                                    "description": "string",
+                                    "index": 4,
+                                    "category": "topic",
+                                    "status": "Live"
+                                },
+                                {
+                                    "identifier": "jdf1_topic_wastewater_management",
+                                    "code": "wastewater_management",
+                                    "translations": null,
+                                    "name": "Wastewater Management",
+                                    "description": "string",
+                                    "index": 5,
+                                    "category": "topic",
+                                    "status": "Live"
+                                },
+                                {
+                                    "identifier": "jdf1_topic_measuring_progress_and_impact",
+                                    "code": "measuring_progress_and_Impact",
+                                    "translations": null,
+                                    "name": "Measuring Progress and Impact",
+                                    "description": "string",
+                                    "index": 6,
+                                    "category": "topic",
+                                    "status": "Live"
+                                }
+                            ],
+                            "translations": null,
+                            "name": "Resource Planning and Management",
+                            "description": "string",
+                            "index": 6,
+                            "category": "topic",
+                            "status": "Live"
+                        }
+                    ],
+                    "translations": null,
+                    "name": "Topic",
+                    "description": "topic map with topic itself",
+                    "index": 4,
+                    "status": "Live"
+                }
+            ]
+        }
+    }
+}

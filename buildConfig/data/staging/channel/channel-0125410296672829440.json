@@ -1,0 +1,44 @@
+{
+  "id": "api.channel.read",
+  "ver": "1.0",
+  "ts": "2019-04-24T09:48:01.381Z",
+  "params": {
+    "resmsgid": "0c864150-6676-11e9-af9e-6d7c4817c29b",
+    "msgid": "90e3f736-2e65-5a47-c32b-9181c91b8437",
+    "status": "successful",
+    "err": null,
+    "errmsg": null
+  },
+  "responseCode": "OK",
+  "result": {
+    "channel": {
+      "identifier": "0125410296672829440",
+      "code": "0125410296672829440",
+      "frameworks": [
+        {
+          "identifier": "jdf1",
+          "name": "Jaldhara Framework",
+          "objectType": "Framework",
+          "relation": "hasSequenceMember",
+          "description": "Jaldhara Framework",
+          "index": 1,
+          "status": null,
+          "depth": null,
+          "mimeType": null,
+          "visibility": null,
+          "compatibilityLevel": null
+        }
+      ],
+      "consumerId": "bd205450-667d-4c8f-a522-906018c83673",
+      "channel": "in.ekstep",
+      "description": "Jaldhara",
+      "createdOn": "2018-07-06T14:28:58.027+0000",
+      "versionKey": "1533898645521",
+      "appId": "ekstep_portal",
+      "name": "jaldhara",
+      "lastUpdatedOn": "2018-08-10T10:57:25.521+0000",
+      "defaultFramework": "jdf1",
+      "status": "Live"
+    }
+  }
+}

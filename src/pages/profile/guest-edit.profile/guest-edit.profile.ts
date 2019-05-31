@@ -74,7 +74,7 @@ export class GuestEditProfilePage {
   profileForTelemetry: any = {};
 
   syllabusOptions = {
-    title: this.commonUtilService.translateMessage('BOARD').toLocaleUpperCase(),
+    title: this.commonUtilService.translateMessage('FRAMEWORK').toLocaleUpperCase(),
     cssClass: 'select-box'
   };
 
@@ -256,6 +256,7 @@ export class GuestEditProfilePage {
             // renaming the fields to text, value and checked
             const value = { 'name': element.name, 'code': element.identifier };
             this.syllabusList.push(value);
+            this.frameworkId = element.identifier;
           });
 
           if (this.profile && this.profile.syllabus && this.profile.syllabus[0] !== undefined) {
@@ -265,8 +266,15 @@ export class GuestEditProfilePage {
                 // loader.dismiss();
                 this.categories = catagories;
 
-                this.resetForm(0, false);
+                // this.resetForm(0, false);
 
+                const request: CategoryRequest = {
+                  currentCategory: this.categories[0].code,
+                  selectedLanguage: this.translate.currentLang,
+                  categories: FrameworkCategory.DEFAULT_FRAMEWORK_CATEGORIES
+                };
+      
+                this.getCategoryData(request,'boardList')
               }).catch(() => {
                 this.isFormValid = false;
                 this.loader.dismiss();
@@ -298,23 +306,38 @@ export class GuestEditProfilePage {
 
         this[list] = result;
 
-        if (req.currentCategory === 'board') {
-          const boardName = this.syllabusList.find(framework => this.frameworkId === framework.code);
-          if (boardName) {
-            const boardCode = result.find(board => boardName.name === board.name);
-            if (boardCode) {
-              this.guestEditForm.patchValue({
-                boards: [boardCode.code]
-              });
-              this.resetForm(1, false);
-            } else {
-              this.guestEditForm.patchValue({
-                boards: [result[0].code]
-              });
-              this.resetForm(1, false);
-            }
-          }
-        } else if (this.isEditData) {
+        if (list == 'boardList') {
+          // let boardcodes = [];
+          // this[list].forEach((item)=>{
+          //   boardcodes.push(item.code);
+          // })
+          this.guestEditForm.patchValue({
+            boards: this.profile.board,
+            grades: [],
+            medium: []
+          });
+
+          this.resetForm(1, true);
+        }
+
+        // if (req.currentCategory === 'board') {
+        //   const boardName = this.syllabusList.find(framework => this.frameworkId === framework.code);
+        //   if (boardName) {
+        //     const boardCode = result.find(board => boardName.name === board.name);
+        //     if (boardCode) {
+        //       this.guestEditForm.patchValue({
+        //         boards: [boardCode.code]
+        //       });
+        //       this.resetForm(1, false);
+        //     } else {
+        //       this.guestEditForm.patchValue({
+        //         boards: [result[0].code]
+        //       });
+        //       this.resetForm(1, false);
+        //     }
+        //   }
+        // } else 
+        if (this.isEditData) {
           this.isEditData = false;
 
           this.guestEditForm.patchValue({
@@ -533,7 +556,8 @@ export class GuestEditProfilePage {
     req.profileType = formVal.profileType;
     req.source = this.profile.source;
     req.createdAt = this.profile.createdAt;
-    req.syllabus = (!formVal.syllabus.length) ? [] : [formVal.syllabus];
+    // req.syllabus = (!formVal.syllabus.length) ? [] : [formVal.syllabus];
+    req.syllabus = [this.frameworkId];
 
     if (formVal.grades && formVal.grades.length > 0) {
       formVal.grades.forEach(gradeCode => {

@@ -1,0 +1,57 @@
+{
+    "id": "api.form.read",
+    "params": {
+        "resmsgid": "19796bb3-7502-481f-afef-b4e19f22a9ba",
+        "msgid": "9a902a84-95cf-4adf-a976-0ea2bdf8ad75",
+        "status": "successful"
+    },
+    "responseCode": "OK",
+    "result": {
+        "form": {
+            "type": "pageassemble",
+            "subtype": "library",
+            "action": "filter",
+            "component": "*",
+            "framework": "*",
+            "data": {
+                "templateName": "defaultTemplate",
+                "action": "filter",
+                "fields": [
+                    {
+                        "name": "Proficiency",
+                        "translations": "{\"en\":\"Proficiency\"}",
+                        "code": "board",
+                        "index": 1,
+                        "values": []
+                    },
+                    {
+                        "name": "Water Resource",
+                        "translations": "{\"en\":\"Water Resource\"}",
+                        "code": "gradeLevel",
+                        "index": 2,
+                        "values": []
+                    },
+                    {
+                        "name": "Topic",
+                        "translations": "{\"en\":\"Topic\"}",
+                        "code": "topic",
+                        "index": 3,
+                        "values": []
+                    },
+                    {
+                        "name": "Language",
+                        "translations": "{\"en\":\"Language\"}",
+                        "code": "medium",
+                        "index": 4,
+                        "values": []
+                    }
+                ]
+            },
+            "created_on": "2019-04-25T08:46:39.601Z",
+            "last_modified_on": null,
+            "rootOrgId": "*"
+        }
+    },
+    "ts": "2019-04-25T08:59:45.917Z",
+    "ver": "1.0"
+}
